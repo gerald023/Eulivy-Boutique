@@ -9,11 +9,11 @@ function IconCard(data : IconCardType) {
     <>
       <Box className="icon_card">
         <Box className="icon_box">
-            <Image src={iconImage}/>
+            <Image src={data.image}/>
         </Box>
         <Box className="icon_txt">
             <h2>{data.title}</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, architecto?</p>
+            <p>{data.description}</p>
         </Box>
       </Box>
     </>
