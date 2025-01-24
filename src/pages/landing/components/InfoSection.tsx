@@ -10,7 +10,7 @@ function InfoSection() {
         {
             IconCateData.map(data =>{
                 return(
-                    <IconCard data={data}/>
+                    <IconCard description={data.description} image={data.image} title={data.title} />
                 )
             })
         }

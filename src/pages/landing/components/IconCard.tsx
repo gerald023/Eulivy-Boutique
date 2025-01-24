@@ -4,7 +4,7 @@ import iconImage from '../../../assets/images/analize_crime.png'
 import { IconCardType } from "../../../types/props_types";
 
 
-function IconCard(data :{data: IconCardType}) {
+function IconCard(data : IconCardType) {
   return (
     <>
       <Box className="icon_card">
@@ -12,7 +12,7 @@ function IconCard(data :{data: IconCardType}) {
             <Image src={iconImage}/>
         </Box>
         <Box className="icon_txt">
-            <h2>Analyze Crime Data</h2>
+            <h2>{data.title}</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, architecto?</p>
         </Box>
       </Box>
