@@ -1,0 +1,127 @@
+.home_banner{
+    width: 100%;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 6%;
+    background: url('../../../../assets/images/map4.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    box-shadow: inset 500px 20px 80px rgba(0, 0, 0, 0.363);
+}
+.home_banner .banner_txt {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.home_banner .banner_txt h1{
+    font-size: 60px;
+    line-height: 1.2;
+    text-shadow: 3px 3px 3px  black;
+}
+
+.home_banner .banner_txt p{
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 1px 1px 7px  black;
+}
+
+@media (max-width: 1325px) {
+    .home_banner .banner_txt{
+        width: 80%;
+    }
+    .home_banner .banner_txt h1{
+        font-size: 50px;
+    }
+    .home_banner .banner_txt p{
+        font-size: 25   px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .home_banner .banner_txt{
+        width: 80%;
+    }
+    .home_banner .banner_txt h1{
+        font-size: 50px;
+    }
+    .home_banner .banner_txt p{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home_banner{
+        gap: 20px;
+    }
+    .home_banner .banner_txt{
+        width: 80%;
+    }
+    .home_banner .banner_txt h1{
+        font-size: 40px;
+    }
+    .home_banner .banner_txt p{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home_banner{
+        gap: 20px;
+    }
+    .home_banner .banner_txt{
+        width: 80%;
+    }
+    .home_banner .banner_txt h1{
+        font-size: 30px;
+    }
+    .home_banner .banner_txt p{
+        font-size: 15px;
+    }
+}
+
+
+.icon_card{
+    display: flex;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 6px 10px gray;
+    height:350px;
+    margin-bottom: 30px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 9px;
+    align-items: flex-end;
+}
+.icon_card .icon_box{
+    width: 60%;
+    border-radius: 50%;
+    height: 40%;
+    overflow: hidden;
+    position: absolute;
+    top: -20%;
+}
+.icon_card .icon_box img{
+    object-fit: scale-down;
+    object-position: top;
+    /* background-color: yellow; */
+    width: 100%;
+}
+
+.icon_card .icon_txt{
+    display: flex;
+    flex-direction: column;
+}
+.icon_card .icon_txt h2{
+    line-height: 1;
+}
+.icon_card .icon_txt p{
+    font-weight: 600;
+    font-size: 20px;
+}
