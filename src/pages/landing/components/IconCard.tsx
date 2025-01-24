@@ -1,6 +1,5 @@
 import { Box, Image } from "@mantine/core"
 import './styles/heroSection.css';
-import iconImage from '../../../assets/images/analize_crime.png'
 import { IconCardType } from "../../../types/props_types";
 
 
