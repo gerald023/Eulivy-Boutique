@@ -1,6 +1,7 @@
 import { Box, Button, Flex } from "@mantine/core";
 import './styles/navBar.css';
 import { FaSearch } from "react-icons/fa";
+import { IoMenu } from "react-icons/io5";
 
 
 
@@ -11,12 +12,17 @@ function NavBar() {
         <Box>
             <h1>Criminal Records</h1>
         </Box>
-        <Flex gap={30}>
+        <Flex gap={30} className="nav_btn">
             <Button color="black" size="lg" rightSection={<FaSearch/>}>
                 Explore
             </Button>
             <Button size="lg" variant="outline" color="black">
                 Get started
+            </Button>
+        </Flex>
+        <Flex className="nav_menu">
+            <Button variant="transparent" color="black" className="hamBurgar">
+                <IoMenu/>
             </Button>
         </Flex>
       </Box>

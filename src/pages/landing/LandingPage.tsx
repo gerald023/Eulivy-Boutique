@@ -1,10 +1,14 @@
-import { HeroSection, IconCard } from "./components"
+import { Box } from "@mantine/core"
+import { HeroSection, InfoSection } from "./components";
+import './components/styles/landingPage.css';
 
 function LandingPage() {
   return (
     <>
-      <HeroSection/>
-      <IconCard/>
+      <Box className="landing_page">
+        <HeroSection/>
+        <InfoSection/>
+      </Box>
     </>
   )
 }

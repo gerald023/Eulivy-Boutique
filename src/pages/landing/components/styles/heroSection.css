@@ -84,11 +84,17 @@
     }
 }
 
+.iconCardCon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .icon_card{
     display: flex;
     width: 300px;
     background-color: white;
+    margin-top: 100px;
     border-radius: 20px;
     box-shadow: 3px 6px 10px gray;
     height:350px;
