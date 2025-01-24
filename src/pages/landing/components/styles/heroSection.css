@@ -98,7 +98,6 @@
     border-radius: 20px;
     box-shadow: 3px 6px 10px gray;
     height:350px;
-    margin-bottom: 30px;
     position: relative;
     justify-content: center;
     text-align: center;
@@ -109,6 +108,7 @@
     width: 60%;
     border-radius: 50%;
     height: 40%;
+    box-shadow: 1px 1px 10px gray;
     overflow: hidden;
     position: absolute;
     top: -20%;
@@ -130,4 +130,44 @@
 .icon_card .icon_txt p{
     font-weight: 600;
     font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .icon_card{
+        width: 250px;
+        height: 300px;
+    }
+    .icon_card h2{
+        font-size: 20px;
+    }
+    .icon_card .icon_txt p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .icon_card{
+        width: 200px;
+        height: 250px;
+    }
+    .icon_card h2{
+        font-size: 16px;
+    }
+    .icon_card .icon_txt p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .icon_card{
+        width: 1fr;
+        height: 220px;
+        margin-top: 70px;
+    }
+    .icon_card h2{
+        font-size: 14px;
+    }
+    .icon_card .icon_txt p{
+        font-size: 10px;
+    }
 }
