@@ -35,7 +35,6 @@ function CrimeInsightSection() {
            }}
            maxBarWidth={20}
           tooltipAnimationDuration={200}
-          withBarValueLabel
           styles={{
             axisLabel:{
               fontSize: '15px',
