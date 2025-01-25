@@ -38,7 +38,7 @@ function CrimeInsightSection() {
           withBarValueLabel
           styles={{
             axisLabel:{
-              fontSize: '20px',
+              fontSize: '15px',
               fontWeight: 600,
             },
           }}
@@ -57,7 +57,7 @@ function CrimeInsightSection() {
         // w={'100%'}
         h={'80%'}
         tooltipAnimationDuration={200}
-        tooltipDataSource="segment" mx="auto" />
+        tooltipDataSource="segment"  />
        </Box>
        {/* <Divider my="md" /> */}
        <Box className="crimeDataChart">
