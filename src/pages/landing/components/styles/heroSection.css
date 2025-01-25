@@ -87,6 +87,7 @@
 .iconCardCon{
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: space-around;
 }
 
@@ -146,6 +147,7 @@
 }
 
 @media (max-width: 600px) {
+    
     .icon_card{
         width: 200px;
         height: 250px;

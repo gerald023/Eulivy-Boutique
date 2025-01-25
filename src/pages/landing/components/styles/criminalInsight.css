@@ -1,0 +1,97 @@
+.crimeInsightCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.crimeInsightCon .insightCharts{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-gap: 20px; 
+    min-height: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 10px 10px 10px grey;
+}
+.crimeInsightCon .insightCharts .barChartCon{
+    width: 100%;
+    height: 100%;
+}
+.crimeInsightCon .insightCharts .barChartCon .crimeBarChart{
+    height: 100%;
+    width: 100%;
+}
+.crimeInsightCon .insightCharts .crimeRate{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+.crimeInsightCon .crimeData{
+    border-left: 2px solid gray;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+
+.crimeInsightCon .crimeData div{
+    display: flex;
+    width: 100%;
+    height: 40%;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1025px) {
+    .crimeInsightCon .crimeData{
+        gap: 0;
+        justify-content: space-around;
+    }
+    .crimeInsightCon .crimeData div{
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .crimeInsightCon .crimeData div .sparkChart{
+        width: 100%;
+    }
+}
+
+@media (max-width: 905px) {
+    .crimeInsightCon .insightCharts{
+        display: flex;
+        flex-direction: column;
+    }
+    .crimeInsightCon .crimeData{
+        border-left: none;
+        border-top: 2px solid gray;
+    }
+}
+
+@media (max-width: 650px) {
+    .crimeInsightCon .insightCharts .barChartCon{
+        width: 100%;
+        height: 100%;
+    }
+    .crimeInsightCon .insightCharts .barChartCon .crimeBarChart{
+        height: 100%;
+        width: 100%;
+    }
+    .crimeInsightCon .crimeData div{
+        /* display: flex; */
+        height: 50%;
+        /* justify-content: center; */
+        /* flex-direction: column; */
+    }
+    .crimeInsightCon .crimeData div .crimePie{
+        width: 100%;
+        height: 100%;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+}
+
