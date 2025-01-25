@@ -17,7 +17,7 @@ function CrimeInsightSection() {
           </Box>
          <Box className="barChartCon">
             <BarChart
-          // h={'100%'}
+          // h={200}
           className="crimeBarChart"
           data={CrimeInsight}
           dataKey="month"
@@ -28,7 +28,6 @@ function CrimeInsightSection() {
             { name: 'Kidnapping', color: 'blue.6' },
             { name: 'Car_Hijacking', color: 'teal.6' },
           ]}
-          
           withLegend
           barProps={{ radius: 50,
             width: 10
@@ -47,14 +46,13 @@ function CrimeInsightSection() {
         <Box className="crimeData">
        <Box className="crimeDataChart">
         <h3>Crimes with Mortality rate.</h3>
-       <PieChart data={CrimeData}
+       <PieChart 
+        data={CrimeData}
         withTooltip 
         withLabels
+        size={100}
         className="crimePie"
-        // withLabelsLine
         labelsType="percent"
-        // w={'100%'}
-        h={'80%'}
         tooltipAnimationDuration={200}
         tooltipDataSource="segment"  />
        </Box>
@@ -62,7 +60,8 @@ function CrimeInsightSection() {
        <Box className="crimeDataChart">
        <h3>Months with high crime rate.</h3>
        <LineChart
-      h={300}
+      // h={100}
+      className="crimeLineChart"
       data={CrimeRateData}
       series={[{ name: 'occurrence', label: 'Avg. Crime Rate' }]}
       dataKey="date"
@@ -75,7 +74,7 @@ function CrimeInsightSection() {
         { offset: 80, color: 'cyan.5' },
         { offset: 100, color: 'blue.5' },
       ]}
-      strokeWidth={5}
+      strokeWidth={3}
       curveType="natural"
       yAxisProps={{ domain: [-25, 40] }}
       valueFormatter={(value) => `${value}`}
