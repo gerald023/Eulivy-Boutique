@@ -1,6 +1,6 @@
 import { Box, } from "@mantine/core";
-import { BarChart, PieChart, Sparkline } from '@mantine/charts';
-import { CrimeData, CrimeInsight } from "../../../data/chartDatas";
+import { BarChart, LineChart, PieChart } from '@mantine/charts';
+import { CrimeData, CrimeInsight, CrimeRateData } from "../../../data/chartDatas";
 import './styles/criminalInsight.css';
 
 
@@ -61,15 +61,25 @@ function CrimeInsightSection() {
        {/* <Divider my="md" /> */}
        <Box className="crimeDataChart">
        <h3>Months with high crime rate.</h3>
-        <Sparkline
-        // w={'60%'}
-        h={'100%'}
-        className="sparkChart"
-        data={[1,1, 6,20,4,12,6]}
-        
-        trendColors={{ positive: 'red', negative: 'red.6', neutral: 'gray.5' }}
-        fillOpacity={0.2}
-        />
+       <LineChart
+      h={300}
+      data={CrimeRateData}
+      series={[{ name: 'occurrence', label: 'Avg. Crime Rate' }]}
+      dataKey="date"
+      type="gradient"
+      gradientStops={[
+        { offset: 0, color: 'red.6' },
+        { offset: 20, color: 'orange.6' },
+        { offset: 40, color: 'yellow.5' },
+        { offset: 70, color: 'lime.5' },
+        { offset: 80, color: 'cyan.5' },
+        { offset: 100, color: 'blue.5' },
+      ]}
+      strokeWidth={5}
+      curveType="natural"
+      yAxisProps={{ domain: [-25, 40] }}
+      valueFormatter={(value) => `${value}`}
+    />
        </Box>
         </Box>
         </Box>

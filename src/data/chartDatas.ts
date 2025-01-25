@@ -34,23 +34,18 @@ export const CrimeInsight = [
     { name: 'Others', value: 10, color: 'gray.6' },
   ];
 
-
-  export const CrimeRate = [
-    { 
-        month: 'January',
-        occurrence: 1200,
-    },
-    { 
-        month: 'February',
-        occurrence: 1900,
-    },
-    { 
-        month: 'March',
-        occurrence: 400,
-    },
-    { 
-        month: 'April',
-        occurrence: 1000,
-    },
-    
+  export const CrimeRateData = [
+    { date: 'Jan', occurrence: -25 },
+    { date: 'Feb', occurrence: -10 },
+    { date: 'Mar', occurrence: 5 },
+    { date: 'Apr', occurrence: 15 },
+    { date: 'May', occurrence: 30 },
+    { date: 'Jun', occurrence: 15 },
+    { date: 'Jul', occurrence: 30 },
+    { date: 'Aug', occurrence: 40 },
+    { date: 'Sep', occurrence: 15 },
+    { date: 'Oct', occurrence: 20 },
+    { date: 'Nov', occurrence: 0 },
+    { date: 'Dec', occurrence: -10 },
   ];
+  
