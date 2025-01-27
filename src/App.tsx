@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { LandingLayout } from './layouts';
-import { LandingPage } from "./pages";
+import { AuthLayout, LandingLayout } from './layouts';
+import { LandingPage, LoginPage, SignUpPage } from "./pages";
+import { AnimatePresence,  } from 'framer-motion';
 
 
 function App() {
@@ -14,10 +15,31 @@ function App() {
           element: <LandingPage/>
         }
       ]
+    },
+    {
+      path: 'auth',
+      element: <AuthLayout/>,
+      children: [
+        {
+          index: true,
+          // path: 'sign-up',
+          element: <SignUpPage/>
+        },
+        {
+          path: 'sign-up',
+          element: <SignUpPage/>
+        },
+        {
+          path: 'login',
+          element: <LoginPage/>,
+        }
+      ]
     }
   ])
   return (
+    <AnimatePresence mode="wait">
     <RouterProvider router={router}/>
+    </AnimatePresence>
   )
 }
 

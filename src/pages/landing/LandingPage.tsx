@@ -1,5 +1,5 @@
 import { Box } from "@mantine/core"
-import { CrimeInsightSection, HeroSection, InfoSection } from "./components";
+import { CrimeInsightSection, GlobalReach, HeroSection, InfoSection } from "./components";
 import './components/styles/landingPage.css';
 
 function LandingPage() {
@@ -9,6 +9,7 @@ function LandingPage() {
         <HeroSection/>
         <InfoSection/>
         <CrimeInsightSection/>
+        <GlobalReach/>
       </Box>
     </>
   )

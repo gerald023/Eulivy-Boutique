@@ -6,18 +6,42 @@
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
-
+--background: #eee;
+--btn-background: #000;
+--pry-color: #000;
+--wht-text: #fff;
+--wht-btn-text: #000;
+--shadow-color: gray;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
+@media (prefers-color-scheme: dark) {
+  :root{
+    --background: #000;
+    --btn-background: #fff;
+    --pry-color: #fff;
+    --wht-text: #000;
+    --shadow-color: rgb(38, 39, 37);
+  }
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  text-decoration: none;
+}
+/* html{
+  color-scheme: light dark;
+} */
 .home_layout{
   padding: 0 7%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #eee;
+  background-color: var(--background);
+}
+
+button{
+  background-color: var(--btn-background);
 }

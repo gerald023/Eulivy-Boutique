@@ -13,15 +13,15 @@ function NavBar() {
             <h1>Criminal Records</h1>
         </Box>
         <Flex gap={30} className="nav_btn">
-            <Button color="black" size="lg" rightSection={<FaSearch/>}>
+            <Button className="nav_btns" color="" size="lg" rightSection={<FaSearch/>}>
                 Explore
             </Button>
-            <Button size="lg" variant="outline" color="black">
+            <Button className="nav_btns" component="a" href="auth/" size="lg" variant="outline" color="">
                 Get started
             </Button>
         </Flex>
         <Flex className="nav_menu">
-            <Button variant="transparent" color="black" className="hamBurgar">
+            <Button variant="transparent" color="" className="hamBurgar">
                 <IoMenu/>
             </Button>
         </Flex>

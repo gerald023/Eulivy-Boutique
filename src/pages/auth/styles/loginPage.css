@@ -1,0 +1,139 @@
+body{
+    overflow-x: hidden;
+}
+.loginPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../../../assets/images/loginBackground.jpg');
+    background-repeat: 0;
+    background-size: cover;
+    /* backdrop-filter: ; */
+}
+.loginPage::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.041);
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+.loginPage .loginFormCon{
+    width: 34%;
+    display: flex;
+    z-index: 6;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 4%;
+    background-color: white;
+    /* box-shadow: 3px 5px 10px grey; */
+    border-radius: 15px;
+    line-height: 1;
+    gap: 30px;
+    
+}
+.loginPage .loginFormCon h1{
+    font-weight: 600;
+    font-size: 26px;
+}
+.loginFormCon .loginOptions{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.loginFormCon .loginOptions button{
+    background-color: transparent;
+    border: 1px solid gray;
+    color: black;
+    transition: ease-in-out 0.5s;
+}
+.loginFormCon .loginOptions button:hover{
+    border-color: transparent;
+}
+.loginFormCon .loginOptions button[btn-name="googleBtn"]:hover{
+    background-color: rgba(165, 165, 165, 0.226);
+}
+.loginFormCon .loginOptions button[btn-name="appleBtn"]{
+    font-size: 23px;
+    padding: 0px 10px;
+}
+.loginFormCon .loginOptions button[btn-name="appleBtn"]:hover{
+    background-color: black;
+    color: white;
+}
+.loginFormCon .loginOptions button[btn-name="facebookBtn"]{
+    color: blue;
+    font-size: 23px;
+    padding: 0px 10px;
+}
+.loginFormCon .loginOptions button[btn-name="facebookBtn"]:hover{
+    background-color: blue;
+    color: white;
+}
+.loginPage .loginFormCon form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.loginPage .loginFormCon form label{
+    color: black;
+    font-weight: 600;
+}
+.loginPage .loginFormCon form input{
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+    transition: border-color 0.3s ease-in-out;
+}
+.loginFormCon form .forgetPass{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+}
+.loginFormCon form .forgetPass a{
+    color: rgb(61, 61, 61);
+    transition: ease-in-out 0.4s;
+}
+.loginFormCon form .forgetPass a:hover{
+    color: black;
+}
+.loginFormCon form button[type="submit"]{
+    background-color: var(--btn-background);
+}
+.loginFormCon .goToSignUp{
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(77, 77, 77);
+}
+.loginFormCon .goToSignUp a{
+    color: rgb(49, 49, 49);
+    padding-bottom: 2px;
+    border-bottom: 2px dashed rgb(49, 49, 49);
+    transition: ease-in-out 0.5s;
+}
+.loginFormCon .goToSignUp a:hover{
+    color: black;
+    border-color: black;
+}
+
+@media (max-width: 1100px) {
+    .loginPage .loginFormCon{
+        width: 50%;
+    }
+}
+@media (max-width: 800px) {
+    .loginPage .loginFormCon{
+        width: 80%;
+    }
+}
