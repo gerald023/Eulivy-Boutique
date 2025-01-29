@@ -1,0 +1,52 @@
+.adminSideBar{
+    width: 22%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    left: 0;
+    /* top: 50px; */
+    padding: 1%;
+}
+
+.adminSideBar .sidebarCon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.sidebarCon .sidebarAccordIcon{
+    font-size: 25px;
+}
+.adminSideBar .sidebarCon  p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.adminSideBar .sidebarCon .mantine-Accordion-panel{
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.adminSideBar .sidebarCon .dashAccordionList{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.adminSideBar .sidebarCon .dashAccordionList .dashAccordListItem{
+    padding: 15px;
+    border-radius: 3px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 3px 1px 5px rgba(128, 128, 128, 0.473);
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+.adminSideBar .sidebarCon .dashAccordionList .activeBar{
+    background-color: #846CF9;
+    color: white;
+}
+.adminSideBar .dashNavIcon{
+    font-size: 25px;
+}

@@ -21,7 +21,7 @@ function NavBar() {
             </Button>
         </Flex>
         <Flex className="nav_menu">
-            <Button variant="transparent" color="" className="hamBurgar">
+            <Button variant="transparent" color="" className="hamBurger">
                 <IoMenu/>
             </Button>
         </Flex>

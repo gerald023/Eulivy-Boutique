@@ -66,6 +66,7 @@ function SignUpPage() {
                 signUp
             )}>
                <TextInput
+                  input-type="text"
                     size="lg"
                     label='Full name'
                     placeholder="John Doe"
@@ -73,6 +74,7 @@ function SignUpPage() {
                     {...loginForm.getInputProps('fullName')}
                 />
                 <TextInput
+                    input-type="text"
                     size="lg"
                     label='Email'
                     placeholder="geraldlekara19@gmail.com"
@@ -91,7 +93,7 @@ function SignUpPage() {
                 </Button>
             </form>
             <Flex className="goToSignUp">
-                <p>Already have an account?? </p>
+                <p>Already have an account? </p>
                 <Link to={'/auth/login'}>Log in</Link>
             </Flex>
             {/* <Transitiog */}

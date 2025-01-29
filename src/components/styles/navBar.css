@@ -13,7 +13,7 @@
 .nav_menu{
     display: none;
 }
-.hamBurgar{
+.hamBurger{
     font-size: 30px;   
 }
 
@@ -31,6 +31,21 @@
 @media (max-width: 900px) {
     .nav_bar h1{
         font-size: 25px;
+    }
+    .nav_btn{
+        display: none;
+    }
+    .nav_menu{
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav_bar h1{
+        font-size: 15px;
+    }
+    .nav_bar{
+        box-shadow: none;
     }
     .nav_btn{
         display: none;

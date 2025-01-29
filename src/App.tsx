@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { AuthLayout, LandingLayout } from './layouts';
-import { LandingPage, LoginPage, SignUpPage } from "./pages";
+import { AdminLayout, AuthLayout, LandingLayout } from './layouts';
+import { AdminUserAnalytics, AdminCrimeAnalytics, LandingPage, LoginPage, SignUpPage } from "./pages";
 import { AnimatePresence,  } from 'framer-motion';
 
 
@@ -34,6 +34,18 @@ function App() {
           element: <LoginPage/>,
         }
       ]
+    },
+    {
+      path: 'admin',
+      element: <AdminLayout/>,
+      children:[
+        {index: true, element: <AdminUserAnalytics/>},
+        {path: 'crime', element: <AdminCrimeAnalytics/>}
+      ]
+    },
+    {
+      path: '*',
+      element: <h1>Error! Page not found.</h1>
     }
   ])
   return (

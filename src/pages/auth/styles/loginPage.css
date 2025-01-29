@@ -137,3 +137,64 @@ body{
         width: 80%;
     }
 }
+@media (max-width: 600px) {
+    .loginPage .loginFormCon{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        gap: 20px;
+    }
+    .loginPage .loginFormCon h1{
+        font-size: 20px;
+    }
+    .loginFormCon .loginOptions{
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginPage .loginFormCon form{
+        width: 90%;
+        gap: 15px;
+    }
+    .loginPage .loginFormCon form label{
+        font-size: 12px;
+    }
+    .loginPage .loginFormCon form input{
+        color: rgb(61, 61, 61);
+        font-weight: 600;
+        padding: 0px 5px;
+        font-size: 14px;
+        /* height: fit-content; */
+        /* width: ; */
+        transition: border-color 0.3s ease-in-out;
+    }
+    .loginPage .loginFormCon form .mantine-Input-wrapper{
+        height: fit-content;
+        padding: 0;
+    }
+    .loginFormCon form 	.mantine-Input-input{
+        padding: 0;
+    }
+    .loginFormCon .loginOptions button[btn-name="googleBtn"]{
+        font-size: 12px;
+        padding: 12px 10px;
+        height: fit-content;
+    }
+    .loginFormCon .loginOptions button[btn-name="appleBtn"]{
+        font-size: 17px;
+        padding: 10px 10px;
+        height: fit-content;
+    }
+   
+    .loginFormCon .loginOptions button[btn-name="facebookBtn"]{
+        font-size: 17px;
+        padding: 10px 10px;
+        height: fit-content;
+    }
+    .loginFormCon .goToSignUp{
+        font-size: 13px;
+    }
+    
+}
