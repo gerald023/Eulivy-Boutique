@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AdminLayout, AuthLayout, LandingLayout } from './layouts';
 import { AdminUserAnalytics, AdminCrimeAnalytics, LandingPage, LoginPage, SignUpPage } from "./pages";
 import { AnimatePresence,  } from 'framer-motion';
-
+import { ProtectedRoute } from "./routes/ProtectedRoute";
+import { AddProduct, ViewAllProducts } from "./pages/dashboard/admin/pages";
 
 function App() {
   const router = createBrowserRouter([
@@ -37,10 +38,15 @@ function App() {
     },
     {
       path: 'admin',
-      element: <AdminLayout/>,
+      element: 
+        <ProtectedRoute>
+          <AdminLayout/>
+        </ProtectedRoute>,
       children:[
         {index: true, element: <AdminUserAnalytics/>},
-        {path: 'crime', element: <AdminCrimeAnalytics/>}
+        {path: 'crime', element: <AdminCrimeAnalytics/>},
+        {path: 'add-product', element: <AddProduct/>},
+        {path: 'all-products', element: <ViewAllProducts/>},
       ]
     },
     {

@@ -27,3 +27,21 @@ export const IconCateData = [
         image: take_action,
     }
 ]
+
+export const GlobalReachData = [
+    {
+        value: '200M+',
+        name: 'Followers',
+        details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, cumque.'
+    },
+    {
+        value: '500M+',
+        name: 'User',
+        details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, cumque.'
+    },
+    {
+        value: '50M+',
+        name: 'Daily Users',
+        details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, cumque.'
+    },
+]

@@ -9,6 +9,7 @@
     z-index: 999;
     backdrop-filter: blur(9px);
     box-shadow: 0px 2px 10px gray;
+    height: 60px;
 }
 .nav_menu{
     display: none;
@@ -20,14 +21,19 @@
 .nav_btn .nav_btns{
     background-color: var(--btn-background);
     color: var(--wht-text);
+    background-color: #7950F2;
     font-weight: 600;
 }
 .nav_btns:last-child{
     color: var(--pry-color);
     border-color: var(--pry-color);
-
+    border-color: #7950F2;
+    color: #7950F2;
+    text-shadow: 0px 1px 0px white;
+    border-width: 2px;
     background-color: transparent;
 }
+
 @media (max-width: 900px) {
     .nav_bar h1{
         font-size: 25px;

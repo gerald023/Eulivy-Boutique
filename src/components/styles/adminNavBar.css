@@ -1,0 +1,61 @@
+.adminNavBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FDFEFE;
+    align-items: center;
+    box-shadow: 3px 5px 10px #D2D5DC;
+}
+.adminNavBar .menuSearch{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.adminNavBar .menuSearch button{
+    padding: 0;
+}
+.adminNavBar .menuSearch .menuCon button{
+    font-size: 34px;
+}
+
+.adminNavBar .navListAndProfile{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.adminNavBar .navListAndProfile button{
+    padding: 0;
+}
+ .navIcon{
+    font-size: 24px;
+    color: #48566A;
+    transition: 0.3s ease-in-out;
+}
+.adminNavBar .navListAndProfile .navIcon:hover{
+    color: black;
+}
+.menuDropDown{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.adminMenuItemBtn{
+    font-size: 16px;
+    color: #48566A;
+    font-weight: 600;
+}
+ .profileBtn{
+    font-size: 16px;
+    color: #48566A;
+    font-weight: 600;
+}
+.profileBtn .navIcon{
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .navItemCon{
+        display: none;
+    }
+}

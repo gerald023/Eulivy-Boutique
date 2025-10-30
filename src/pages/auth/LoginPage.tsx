@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple, FaFacebook } from "react-icons/fa";
 import { useState } from "react";
 import AnimatedPage from "../../animation/AnimatedPage";
-
+import {api} from '../../api/axios';
 
 
 
@@ -17,21 +17,25 @@ function LoginPage() {
         initialValues: { email: '', password: '' },
     
         validate: {
-          email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-          password: (value) => (value.length < 5? 'Your password must be more than 4 character' : null),
+            email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+            password: (value) => (value.length < 4? 'Your password must be more than 4 character' : null),
         },
-      });
-      const [loading, setLoading] = useState<boolean>(false)
-      const login = ()=>{
+        });
+        console.log(loginForm.getValues())
+        const [loading, setLoading] = useState<boolean>(false)
+        const login = async ()=>{
         console.log(loginForm.isValid());
         setLoading(false)
         if (loginForm.isValid()) {
+            console.log(loginForm.getValues());
+            const res = await api.post('/user/login/', loginForm.getValues());
+            console.log(res.data())
             setLoading(true);
-            document.location.href = '/'
+            // document.location.href = '/'
         }
-      }
+    }
     
-  return (
+return (
     <>
     <AnimatedPage>
     <Box className="loginPage">
@@ -81,11 +85,11 @@ function LoginPage() {
             </Flex>
             {/* <Transitiog */}
         </Box>
-      </Box>
+    </Box>
     </AnimatedPage>
-     
+
     </>
-  )
+)
 }
 
 export default LoginPage

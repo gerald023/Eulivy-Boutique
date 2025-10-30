@@ -1,0 +1,22 @@
+.adminLayout{
+    display: flex;
+    gap: 5%;
+    padding: 30px;
+    background-color: #EEF1F9;
+}
+.adminLayout .adminSideBarCon{
+    width: 23%;
+    height: 90vh;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.adminLayout .navOutlet{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 68%;
+    /* background-color: red; */
+}

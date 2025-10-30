@@ -1,0 +1,159 @@
+.adminUserAnalytics {
+    /* width: 100%;
+    display: flex;
+    flex-direction: column; */
+}
+
+/* .adminUserAnalytics .analyticDash{
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+} */
+.dashContainer {
+    background-color: white;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 3px 1px 10px rgba(128, 128, 128, 0.315);
+}
+
+.adminUserAnalytics .analyticDash .reports {
+    width: 65%;
+}
+
+/* .adminUserAnalytics .analyticDash .reports .heading{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0;
+} */
+/* .analyticDash .reports .txt{
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    gap: 0;
+ } */
+.analyticDash .reports .txt h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.analyticDash .reports .txt p {
+    color: gray;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.analyticDash .reports .dateInput {
+    font-weight: 600;
+    color: black;
+}
+
+.mantine-DatePickerInput-input {
+    color: gray;
+    font-weight: 700;
+}
+
+.adminUserAnalytics .analyticDash .tabSelector {
+    width: 150px;
+    /* padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2px;
+    overflow: hidden;
+    border-radius: 7px; */
+}
+
+.analyticDash .mantine-Tabs-tab {
+    background-color: transparent;
+    width: fit-content;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.analyticDash .mantine-Tabs-list {
+    justify-content: space-between;
+    border: none;
+}
+
+.analyticDash .tabSelector p:first-child {
+    font-size: 16px;
+    /* line-height: 0; */
+    font-weight: 700;
+}
+
+.analyticDash .tabSelector p:last-child {
+    font-size: 17px;
+    /* line-height: 0; */
+    color: #9A86FA;
+    font-weight: 700;
+}
+
+.analyticDash .tabSelector::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: #AE9FFA;
+    top: -10%;
+    right: -7%;
+    z-index: 1;
+}
+
+.analyticDash .tabSelector::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #C8BEFC;
+    top: -12%;
+    right: -10%;
+}
+
+.analyticDash .newUser::before {
+    background-color: #BBF7D0;
+}
+
+.analyticDash .newUser::before {
+    background-color: #BBF7D0;
+}
+
+.analyticDash .newUser::after {
+    background-color: #DCFCE7;
+}
+
+.analyticDash .newUser p:last-child {
+    color: #62c385;
+}
+
+.analyticDash .activeUsers::before {
+    background-color: #fed8ab;
+}
+
+.analyticDash .activeUsers::after {
+    background-color: #ffedd5;
+}
+
+.analyticDash .activeUsers p:last-child {
+    color: #e79356;
+}
+
+.analyticDash .allUsers {
+    width: 100%;
+    height: 350px;
+    padding: 30px;
+    /* background-color: red; */
+}
+
+.adminUserAnalytics .analyticDash .topCountry {
+    width: 33%;
+
+    background-color: #FFFFFF;
+    box-shadow: 3px 1px 10px rgba(128, 128, 128, 0.315);
+    padding: 20px;
+    border-radius: 20px;
+}

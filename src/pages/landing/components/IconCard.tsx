@@ -12,9 +12,8 @@ function IconCard(data : IconCardType) {
         </Box>
         <Box className="icon_txt">
             <h2>{data.title}</h2>
-            <p>{data.description}</p>
         </Box>
-      </Box>
+      </Box>  
     </>
   )
 }
