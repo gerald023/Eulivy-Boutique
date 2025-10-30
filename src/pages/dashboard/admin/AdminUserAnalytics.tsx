@@ -5,27 +5,26 @@ import { FaRegCalendar  } from "react-icons/fa";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
 import { ActiveUsers, AllUsers, NewUsers } from "../../../data/chartDatas";
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { Chart } from "react-google-charts";
 
 
 
 function AdminUserAnalytics() {
-  const data = [
-    ["Country", "Popularity"],
-    ["Germany", 200],
-    ["United States", 300],
-    ["Brazil", 400],
-    ["Canada", 500],
-    ["France", 600],
-    ["RU", 700],
-  ];
-  const geoChartOptions = {
-    version: "45",
-    colorAxis: { colors: ["#e0f7fa", "#00796b"] }, // Light to dark green
-    backgroundColor: "#f8f9fa",
-    datalessRegionColor: "#eeeeee",
-    defaultColor: "#f5f5f5",
-  };
+  // const data = [
+  //   ["Country", "Popularity"],
+  //   ["Germany", 200],
+  //   ["United States", 300],
+  //   ["Brazil", 400],
+  //   ["Canada", 500],
+  //   ["France", 600],
+  //   ["RU", 700],
+  // ];
+  // const geoChartOptions = {
+  //   version: "45",
+  //   colorAxis: { colors: ["#e0f7fa", "#00796b"] }, // Light to dark green
+  //   backgroundColor: "#f8f9fa",
+  //   datalessRegionColor: "#eeeeee",
+  //   defaultColor: "#f5f5f5",
+  // };
   
   return (
     <>

@@ -17,8 +17,8 @@ function LoginPage() {
         initialValues: { email: '', password: '' },
     
         validate: {
-            email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-            password: (value) => (value.length < 4? 'Your password must be more than 4 character' : null),
+            email: (value:string) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+            password: (value:string) => (value.length < 4? 'Your password must be more than 4 character' : null),
         },
         });
         console.log(loginForm.getValues())

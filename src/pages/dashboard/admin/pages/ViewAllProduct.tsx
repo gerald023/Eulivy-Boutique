@@ -1,4 +1,4 @@
-import { ActionIcon, Box, Button, Image, Indicator, Loader, NumberFormatter, Table, TextInput, Tooltip } from "@mantine/core";
+import { ActionIcon, Box, Button, Image, Indicator, NumberFormatter, Table, TextInput, Tooltip } from "@mantine/core";
 import { FaPlus } from "react-icons/fa6";
 import { FaFilter, FaSearch, FaRegEye, FaRegEdit } from "react-icons/fa";
 import { RiDeleteBinLine } from "react-icons/ri";
@@ -50,6 +50,7 @@ const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 const searchProduct = async(value: string)=>{
       if (!value.trim()) {
     setFilteredProducts(allProducts!);
+    console.log(filteredProducts)
     return;
   }
   const lowerTerm = value.toLowerCase();

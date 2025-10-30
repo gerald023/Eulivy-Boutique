@@ -87,7 +87,6 @@ function AddProduct() {
     const [checked, setChecked] = useState(false);
     const [files, setFiles] = useState<File[] | undefined>(undefined);
     const [loading, setLoading] = useState<boolean>(false)
-      const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
     useEffect(() => {
         addProductForm.setFieldValue('images', files || []);
@@ -129,10 +128,8 @@ function AddProduct() {
             const res = await createEulivyProduct(productData, files);
             console.log(res)
             
-            // setPreviewUrl(imgUrl!)
-            console.log(previewUrl);
             console.log(res)
-            // navigate("/admin/all-products")
+            navigate("/admin/all-products")
         } catch (e) {
             console.log("error while creating product: ", e)
             setLoading(false)

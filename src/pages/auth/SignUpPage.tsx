@@ -20,7 +20,7 @@ function SignUpPage() {
     initialValues: { fullName: '', email: '', password: '' },
 
     validate: {
-      fullName: (value) => {
+      fullName: (value:string) => {
         if (value.trim().length < 4) {
           return 'Full name cannot be less than 5 characters'
         }
@@ -31,8 +31,8 @@ function SignUpPage() {
           return null
         }
       },
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-      password: (value) => (value.length < 5 ? 'Your password must be more than 4 character' : null),
+      email: (value:string) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+      password: (value:string) => (value.length < 5 ? 'Your password must be more than 4 character' : null),
     },
   });
   const { signUp } = useAuth();
