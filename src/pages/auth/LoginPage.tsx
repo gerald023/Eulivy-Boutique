@@ -6,7 +6,9 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple, FaFacebook } from "react-icons/fa";
 import { useState } from "react";
 import AnimatedPage from "../../animation/AnimatedPage";
-import {api} from '../../api/axios';
+// import {api} from '../../api/axios';
+import { useAuth } from "../../server/context/authContext";
+import { signInDTO } from "../../server/dto/authDTO";
 
 
 
@@ -21,18 +23,28 @@ function LoginPage() {
             password: (value:string) => (value.length < 4? 'Your password must be more than 4 character' : null),
         },
         });
-        console.log(loginForm.getValues())
+        // console.log(loginForm.getValues())
         const [loading, setLoading] = useState<boolean>(false)
-        const login = async ()=>{
-        console.log(loginForm.isValid());
-        setLoading(false)
-        if (loginForm.isValid()) {
-            console.log(loginForm.getValues());
-            const res = await api.post('/user/login/', loginForm.getValues());
-            console.log(res.data())
-            setLoading(true);
-            // document.location.href = '/'
+
+        const { signIn } = useAuth()
+        const formValues = loginForm.getValues();
+        const formData : signInDTO = {
+            email: formValues.email,
+            password: formValues.password
         }
+        const login = async ()=>{
+        setLoading(false)
+       try{
+            if (loginForm.isValid()) {
+            const res = await signIn(formData)
+            console.log(res!.user)
+            setLoading(true);
+            document.location.href = '/admin'
+        }
+       }catch(e){
+        console.log(e)
+        setLoading(false)
+       }
     }
     
 return (
@@ -75,7 +87,7 @@ return (
                 <Box className="forgetPass">
                     <Link to={''}>Forgot password?</Link>
                 </Box>
-                <Button disabled={loading} size="lg" type="submit">
+                <Button disabled={loading} size="lg" type="submit" >
                     Login
                 </Button>
             </form>

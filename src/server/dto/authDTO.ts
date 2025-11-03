@@ -3,3 +3,8 @@ export type signUpDTO = {
     password: string,
     displayName?: string
 }
+
+export type signInDTO = {
+    email: string,
+    password: string,
+}

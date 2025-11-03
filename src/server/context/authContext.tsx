@@ -13,7 +13,7 @@ import {
 import { auth, db } from "../firebase";
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 import { UserModel } from "../models/all_models";
-import { signUpDTO } from "../dto/authDTO";
+import { signInDTO, signUpDTO } from "../dto/authDTO";
 
 
 type AuthContextType = {
@@ -21,7 +21,7 @@ type AuthContextType = {
   userModel?: UserModel | null;
   loading: boolean;
   signUp: (data:signUpDTO) => Promise<void>;
-  signIn: (email: string, password: string) => Promise<UserCredential>; 
+  signIn: (data: signInDTO) => Promise<UserCredential | undefined>;
   signOutUser: () => Promise<void>;
   isAdmin: boolean;
   refreshTokenClaims: () => Promise<void>;
@@ -95,8 +95,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  const signIn = (email: string, password: string) => {
-    return signInWithEmailAndPassword(auth, email, password);
+  const signIn = async (data: signInDTO) => {
+    console.log("login with this email & password: ", data.email, data.password);
+    try{
+        const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password);
+    console.log("Logged in:", userCredential.user);
+    return userCredential;
+    }catch(e){
+      console.log("error while login: ", e)
+      console.log("login with this email & password: ", data);
+    }
   };
 
   const signOutUser = () => signOut(auth);
